@@ -1,10 +1,20 @@
+:root {
+    --vu-color-header: brown;
+    --vu-color-grey: #eef2f8;
+    --vu-color-dark-grey: #353e4e;
+    --vu-color-red: #78003f;
+    --vu-color-white: #fff;
+    --vu-color-light-grey: #6d727c;
+    --vu-color-dark: #202630;
+    --vu-color-black: black;
+}
 body {
 	box-sizing: border-box;
 	margin: 0;
 	font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-    background-color: #eef2f8;
+    background-color: var(--vu-color-grey);
 }
 
 *,
@@ -28,10 +38,14 @@ a {
     margin: 0;
 }
 
-
+.vu-logo {
+    height: 48px;
+    width: 200px;
+    object-fit: contain;
+}
 
 .top-bar {
-    background: #353e4e;
+    background: var(--vu-color-dark-grey);
     height: 50px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -40,14 +54,8 @@ a {
     z-index: 20;
 }
 
-.vu-logo {
-    height: 48px;
-    width: 200px;
-    object-fit: contain;
-}
-
 .bottom-bar {
-    background: #78003f;
+    background: var(--vu-color-red);
     padding: 15px;
     height: 80px;
 }
@@ -60,10 +68,26 @@ a {
     align-items: center;
 }
 
+.bottom-bar-list {
+    display: flex;
+    list-style-type: none;
+}
+
+.bottom-bar-item {
+    list-style-type: none;
+    margin-right: 20px;
+}
+
+.bottom-bar-link {
+    color: var(--vu-color-white);
+    font-weight: 500;
+    font-size: 14px;
+}
+
 .main-container-title {
     font-size: 20px;
     margin-bottom: 24px;
-    color: #353e4e;
+    color: var(--vu-color-dark-grey);
 }
 
 .course-item {
@@ -87,26 +111,10 @@ a {
 }
 
 .course-link {
-    color: white;
+    color: var(--vu-color-white);
     margin-right: 8px;
     font-size: 12px;
     height: 21px;
-}
-
-.bottom-bar-list {
-    display: flex;
-    list-style-type: none;
-}
-
-.bottom-bar-item {
-    list-style-type: none;
-    margin-right: 20px;
-}
-
-.bottom-bar-link {
-    color: #fff;
-    font-weight: 500;
-    font-size: 14px;
 }
 
 .course-list {
@@ -115,7 +123,7 @@ a {
 }
 
 .course-header-title {
-    color: #fff;
+    color: var( --vu-color-white);
     font-weight: 700;
     margin-bottom: 0;
     font-size: 24px;
@@ -123,14 +131,14 @@ a {
 
 .course-header-box {
     max-width: 640px;
-    background: #353e4e;
+    background: var(--vu-color-dark-grey);
     padding: 10px 15px;
     margin-bottom: 15px;
 }
 
 .main-container {
     min-height: 600px;
-    background-color: white;
+    background-color: var( --vu-color-white);
     padding: 1.25rem;
     max-width: 1680px;
     margin: 0 auto;
@@ -142,15 +150,14 @@ a {
 
 .mini-test {
     margin: 24px 0;
-    color: #6d727c;
-    color: #6d727c;
+    color: var(--vu-color-light-grey);
 }
 
 .footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-    background: #202630;
+    background: var(--vu-color-dark);
     color: rgba(255,255,255,.4);
     padding: 10px 0;
     text-align: center;
