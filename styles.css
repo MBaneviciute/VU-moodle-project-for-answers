@@ -1,0 +1,157 @@
+body {
+	box-sizing: border-box;
+	margin: 0;
+	font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+    background-color: #eef2f8;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+a {
+	text-decoration: none;
+}
+
+.page {
+    margin: 0;
+}
+
+
+
+.top-bar {
+    background: #353e4e;
+    height: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 14px;
+    position: relative;
+    z-index: 20;
+}
+
+.vu-logo {
+    height: 48px;
+    width: 200px;
+    object-fit: contain;
+}
+
+.bottom-bar {
+    background: #78003f;
+    padding: 15px;
+    height: 80px;
+}
+
+.bottom-bar-container {
+    max-width: 1680px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-container-title {
+    font-size: 20px;
+    margin-bottom: 24px;
+    color: #353e4e;
+}
+
+.course-item {
+    height: 21px;
+}
+
+.course-header-image-container {
+    max-width: 1680px;
+    margin: 0 auto;
+}
+
+.course-header-image {
+    padding: 48px 1.25rem;
+    height: 300px;
+    margin-bottom: 30px;
+    background-image: url('https://emokymai.vu.lt/pluginfile.php/4405/course/overviewfiles/c-programming-course-1024x553.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.course-link {
+    color: white;
+    margin-right: 8px;
+    font-size: 12px;
+    height: 21px;
+}
+
+.bottom-bar-list {
+    display: flex;
+    list-style-type: none;
+}
+
+.bottom-bar-item {
+    list-style-type: none;
+    margin-right: 20px;
+}
+
+.bottom-bar-link {
+    color: #fff;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.course-list {
+    list-style-type: none;
+    display: flex;
+}
+
+.course-header-title {
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 0;
+    font-size: 24px;
+}
+
+.course-header-box {
+    max-width: 640px;
+    background: #353e4e;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+}
+
+.main-container {
+    min-height: 600px;
+    background-color: white;
+    padding: 1.25rem;
+    max-width: 1680px;
+    margin: 0 auto;
+}
+
+.images-container {
+    margin-top: 48px;
+}
+
+.mini-test {
+    margin-top: 24px;
+    color: #6d727c;
+    color: #6d727c;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #202630;
+    color: rgba(255,255,255,.4);
+    padding: 10px 0;
+    text-align: center;
+}
