@@ -141,7 +141,7 @@ a {
 }
 
 .mini-test {
-    margin-top: 24px;
+    margin: 24px 0;
     color: #6d727c;
     color: #6d727c;
 }
@@ -154,4 +154,9 @@ a {
     color: rgba(255,255,255,.4);
     padding: 10px 0;
     text-align: center;
+}
+
+.images-container {
+    display: flex;
+    flex-direction: column;
 }
