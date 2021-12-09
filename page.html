@@ -78,9 +78,7 @@
                 </span>
             </h3>
             <div>
-                <p class="mini-test">
-                    Minitestas 1
-                </p>
+                <p id="miniTestTitle" class="mini-test" />
             </div>
             <div id="content" class="images-container" />
 
@@ -97,18 +95,24 @@
 <script>
     // container where images will be placed
     const content = document.getElementById('content');
+    // test title
+    const testTitle = document.getElementById('miniTestTitle');
 
     // defined test images
     const firstTestImages = [];
-    const secondTestImages = ['masyvas/1.png', 'masyvas/2.png', 'masyvas/3.png', 'masyvas/4.png', 'masyvas/5.png', 'masyvas/6.png', 'masyvas/7.png', 'masyvas/8.png'];
-    const thirdTestImages = [];
-    const fourthTestImages = [];
-    const fifthTestImages = [];
+    const secondTestImages = ['2_testas/1.png', '2_testas/2.png', '2_testas/3.png', '2_testas/4.png', '2_testas/5.png', '2_testas/6.png', '2_testas/7.png', '2_testas/8.png'];
+    const thirdTestImages = ['3_testas/1.png', '3_testas/2.png', '3_testas/3.png', '3_testas/4.png', '3_testas/5.png', '3_testas/6.png', '3_testas/7.png', '3_testas/8.png', '3_testas/9.png'];
+    const fourthTestImages = ['4_testas/1.png', '4_testas/2.png', '4_testas/3.png', '4_testas/4.png', '4_testas/5.png', '4_testas/6.png', '4_testas/7.png', '4_testas/8.png', '4_testas/9.png', '4_testas/10.png'];
+    const fifthTestImages = ['5_testas/1.png', '5_testas/2.png', '5_testas/3.png', '5_testas/4.png', '5_testas/5.png', '5_testas/6.png', '5_testas/7.png', '5_testas/8.png', '5_testas/9.png', '5_testas/10.png'];
 
+    // 1 should be users input 
+    const titleText = document.createTextNode(`Minitestas ${1}`);
+    testTitle.appendChild(titleText);
     // constants
     const ADDITIONAL_NUMBER_TO_ADD = 1;
 
     // appending images
+    // secondTestImages should be ['userinput'].map throught my constants
     secondTestImages.map((item, index) => {
         // Creating two html tags
         const title = document.createElement('p');
