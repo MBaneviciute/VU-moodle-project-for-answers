@@ -66,12 +66,7 @@
             <h2 class="faq-main-title">Frequently asked questions</h2>
             <p class="faq-examination">Examination</p>
             <div>
-                <ul class="faq-box-wrapper">
-                    <li class="faq-box">
-                        <input type="checkbox" id="question" name="question" class="questions">
-                        <label for="question" class="faq-box-title" id="faq-box-title" />
-                        <p class="faq-box-text" id="faq-box-text" />
-                    </li>
+                <ul class="faq-box-wrapper" id="faq-box-wrapper">
                 </ul>
             </div>
         </div>
@@ -85,8 +80,55 @@
 
 </html>
 <script>
-    // faq title and text ID
-    const faqTitle = document.getElementById('faq-box-title');
-    const faqText = document.getElementById('faq-box-text');
+    // these are variables for c please add
+    const usersTitleInput = [];
+    const usersTextInput = [];
+    
+    
+    const usersTitleInputArray = [];
+    const usersTextInputArray = [];
 
+    // after input push to arrays
+    usersTitleInput.map(item => {
+        sersTitleInputArray.push(item);
+    });
+
+    usersTextInput.map(item => {
+        usersTextInputArray.push(item);
+    });
+
+    const faqWrapper = document.getElementById('faq-box-wrapper');
+
+    usersTitleInputArray.map((item, index) => {
+        // Creating html tags
+        const title = document.createElement('label');
+        const text = document.createElement('p');
+        const input = document.createElement('input');
+        const list = document.createElement('ul');
+        const liItem = document.createElement('li');
+
+        faqWrapper.appendChild(liItem);
+        liItem.appendChild(input);
+        liItem.appendChild(title);
+        liItem.appendChild(text);
+
+        input.setAttribute("type", "checkbox");
+        input.setAttribute("id", "question");
+        input.setAttribute("name", "question");
+        title.setAttribute("for", "question");
+
+        // Setting class names
+        title.className = "faq-box-title";
+        text.className = "faq-box-text";
+        input.className = "questions";
+        list.className = "faq-box-wrapper";
+        liItem.className = "faq-box"
+
+        // Appending text and title
+        const additionalTitle = document.createTextNode(usersTitleInputArray[index]);
+        const additionalText = document.createTextNode(usersTextInputArray[index]);
+        
+        title.appendChild(additionalTitle);
+        text.appendChild(additionalText);
+    });
 </script>
