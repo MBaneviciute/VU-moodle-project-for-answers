@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="https://emokymai.vu.lt/theme/image.php/maker/theme/1634296690/favicon">
+    <title>Course: Programavimo pagrindai (I.Radavičius, paskaitos/pratybos)</title>
+</head>
+
+<body>
+    <div class="faq-page">
+        <header class="page-header">
+            <div class="top-bar">
+            </div>
+            <div class="bottom-bar">
+                <div class="bottom-bar-container">
+                    <img class="vu-logo"
+                        src="https://emokymai.vu.lt/pluginfile.php/1/theme_maker/logo/1634296690/VU_VMA_2%287%29%20%281%29.png"
+                        alt="vu logo">
+
+                    <ul class="bottom-bar-list">
+                        <li class="bottom-bar-item">
+                            <a class="bottom-bar-link" href="main.html">Home</a>
+                        </li>
+                        <li class="bottom-bar-item">
+                            <a class="bottom-bar-link" href="https://emokymai.vu.lt/">News</a>
+                        </li>
+                        <li class="bottom-bar-item">
+                            <a class="bottom-bar-link" href="https://emokymai.vu.lt/">Services</a>
+                        </li>
+                        <li class="bottom-bar-item">
+                            <a class="bottom-bar-link" href="https://emokymai.vu.lt/">All courses</a>
+                        </li>
+                        <li class="bottom-bar-item">
+                            <a class="bottom-bar-link" href="https://emokymai.vu.lt/">Archive</a>
+                        </li>
+                        <li class="bottom-bar-item">
+                            <a class="bottom-bar-link" href="https://emokymai.vu.lt/">FAQ</a>
+                        </li>
+                        <li class="bottom-bar-item">
+                            <a class="bottom-bar-link" href="https://emokymai.vu.lt/">English</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+    </div>
+    <section class="faq-title-container">
+        <h1 class="faq-title">
+            Frequently asked questions
+        </h1>
+        <div class="faq-texts">
+            <p class="faq-text">
+                Dashboard /&nbsp;
+            </p>
+            <p class="faq-text">
+                Frequently asked questions
+            </p>
+        </div>
+    </section>
+    <section class="faq-container">
+        <div class="faq-content">
+            <h2 class="faq-main-title">Frequently asked questions</h2>
+            <p class="faq-examination">Examination</p>
+            <div>
+                <ul class="faq-box-wrapper" id="faq-box-wrapper">
+                </ul>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <small class="copyright">
+            Copyright © Vilnius University
+        </small>
+    </footer>
+</body>
+
+</html>
+<script>
+    // these are variables for c please add
+    const usersTitleInput = [];
+    const usersTextInput = [];
+    
+    
+    const usersTitleInputArray = [];
+    const usersTextInputArray = [];
+
+    // after input push to arrays
+    usersTitleInput.map(item => {
+        sersTitleInputArray.push(item);
+    });
+
+    usersTextInput.map(item => {
+        usersTextInputArray.push(item);
+    });
+
+    const faqWrapper = document.getElementById('faq-box-wrapper');
+
+    usersTitleInputArray.map((item, index) => {
+        // Creating html tags
+        const title = document.createElement('label');
+        const text = document.createElement('p');
+        const input = document.createElement('input');
+        const list = document.createElement('ul');
+        const liItem = document.createElement('li');
+
+        faqWrapper.appendChild(liItem);
+        liItem.appendChild(input);
+        liItem.appendChild(title);
+        liItem.appendChild(text);
+
+        input.setAttribute("type", "checkbox");
+        input.setAttribute("id", "question");
+        input.setAttribute("name", "question");
+        title.setAttribute("for", "question");
+
+        // Setting class names
+        title.className = "faq-box-title";
+        text.className = "faq-box-text";
+        input.className = "questions";
+        list.className = "faq-box-wrapper";
+        liItem.className = "faq-box"
+
+        // Appending text and title
+        const additionalTitle = document.createTextNode(usersTitleInputArray[index]);
+        const additionalText = document.createTextNode(usersTextInputArray[index]);
+        
+        title.appendChild(additionalTitle);
+        text.appendChild(additionalText);
+    });
+</script>

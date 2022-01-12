@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="https://emokymai.vu.lt/theme/image.php/maker/theme/1634296690/favicon">
+    <title>Course: Programavimo pagrindai (I.Radavičius, paskaitos/pratybos)</title>
+</head>
+
+<body>
+    <div class="grades-page">
+        <header class="page-header">
+            <div class="top-bar">
+            </div>
+            <div class="bottom-bar">
+                <div class="bottom-bar-container">
+                    <img class="vu-logo"
+                        src="https://emokymai.vu.lt/pluginfile.php/1/theme_maker/logo/1634296690/VU_VMA_2%287%29%20%281%29.png"
+                        alt="vu logo">
+
+                    <ul class="bottom-bar-list">
+                        <li class="bottom-bar-item">
+                            <a class="bottom-bar-link" href="main.html">Home</a>
+                        </li>
+                        <li class="bottom-bar-item">
+                            <a class="bottom-bar-link" href="https://emokymai.vu.lt/">News</a>
+                        </li>
+                        <li class="bottom-bar-item">
+                            <a class="bottom-bar-link" href="https://emokymai.vu.lt/">Services</a>
+                        </li>
+                        <li class="bottom-bar-item">
+                            <a class="bottom-bar-link" href="https://emokymai.vu.lt/">All courses</a>
+                        </li>
+                        <li class="bottom-bar-item">
+                            <a class="bottom-bar-link" href="https://emokymai.vu.lt/">Archive</a>
+                        </li>
+                        <li class="bottom-bar-item">
+                            <a class="bottom-bar-link" href="https://emokymai.vu.lt/">FAQ</a>
+                        </li>
+                        <li class="bottom-bar-item">
+                            <a class="bottom-bar-link" href="https://emokymai.vu.lt/">English</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+    </div>
+    <section class="grades-title-container">
+        <div class="grades-account-wrapper">
+            <img class="grades-image" src="https://emokymai.vu.lt/theme/image.php/maker/core/1634296690/u/f1" class="userpicture defaultuserpic" width="100" height="100" alt="">
+            <h1 class="grades-name" id="name"></h1>
+        </div>
+        <div class="grade-texts">
+            <p class="grades-text">
+                Dashboard /&nbsp;
+            </p>
+            <p class="grades-text">
+                Grades
+            </p>
+        </div>
+    </section>
+    <section class="grades-container">
+        <div class="grades-content">
+            <h2 class="grades-main-title">Courses I am taking</h2>
+            <table cellspacing="0" id="overview-grade" class="flexible table table-striped table-hover boxaligncenter generaltable">
+                <thead>
+                    <tr>
+                        <th class="grades-table-header" scope="col">
+                            Course name
+                            <div class="commands">
+
+                            </div>
+                        </th>
+                        <th class="grades-table-header" scope="col">
+                            Grade
+                            <div class="commands">
+
+                            </div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="cell grades-grey-row">
+                            <a class="grades-table-title" href="https://emokymai.vu.lt/course/user.php?mode=grade&amp;id=1732&amp;user=2467">
+                                Akademinė ir mokslinė anglų kalba</a>
+                        </td>
+                        <td class="grades-grey-row">
+                            Failed
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="cell">
+                            <a class="grades-table-title" href="https://emokymai.vu.lt/course/user.php?mode=grade&amp;id=3676&amp;user=2467">
+                                Algebra ir geometrija
+                            </a>
+                        </td>
+                        <td>
+                            Failed
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="cell grades-grey-row">
+                            <a class="grades-table-title" href="https://emokymai.vu.lt/course/user.php?mode=grade&amp;id=3784&amp;user=2467">
+                                Discrete Mathematics
+                            </a>
+                        </td>
+                        <td class="grades-grey-row">
+                            Failed
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="cell">
+                            <a class="grades-table-title" href="https://emokymai.vu.lt/course/user.php?mode=grade&amp;id=2618&amp;user=2467">
+                                Matematinė analizė (INF)
+                            </a>
+                        </td>
+                        <td>
+                            Failed
+                        </td>
+                    </tr>
+                    <tr">
+                        <td class="cell grades-grey-row">
+                            <a class="grades-table-title" href="https://emokymai.vu.lt/course/user.php?mode=grade&amp;id=1799&amp;user=2467">
+                                Praktinė informatika
+                            </a>
+                        </td>
+                        <td class="grades-grey-row">
+                            Failed
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="cell">
+                            <a class="grades-table-title" href="https://emokymai.vu.lt/course/user.php?mode=grade&amp;id=2303&amp;user=2467">
+                                Programavimo pagrindai (I.Radavičius, paskaitos/pratybos)
+                            </a>
+                        </td>
+                        <td>
+                            Failed
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <footer class="footer">
+        <small class="copyright">
+            Copyright © Vilnius University
+        </small>
+    </footer>
+</body>
+
+</html>
+<script>
+    const nameID = document.getElementById('name');
+
+    //insted Dalius Pamedytis add from c
+    const title = document.createTextNode("Dalius Pamedytis");
+    nameID.appendChild(title);
+</script>

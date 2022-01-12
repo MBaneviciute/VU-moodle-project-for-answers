@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="https://emokymai.vu.lt/theme/image.php/maker/theme/1634296690/favicon">
+    <title>Course: Programavimo pagrindai (I.Radavičius, paskaitos/pratybos)</title>
+</head>
+
+<body>
+    <div class="page">
+        <header class="page-header">
+            <div class="top-bar">
+            </div>
+            <div class="bottom-bar">
+                <div class="bottom-bar-container">
+                    <img class="vu-logo"
+                        src="https://emokymai.vu.lt/pluginfile.php/1/theme_maker/logo/1634296690/VU_VMA_2%287%29%20%281%29.png"
+                        alt="vu logo">
+
+                    <ul class="bottom-bar-list">
+                        <li class="bottom-bar-item">
+                            <a class="bottom-bar-link" href="main.html">Home</a>
+                        </li>
+                        <li class="bottom-bar-item">
+                            <a class="bottom-bar-link" href="grades.html">Grades</a>
+                        </li>
+                        <li class="bottom-bar-item">
+                            <a class="bottom-bar-link" href="https://emokymai.vu.lt/">Services</a>
+                        </li>
+                        <li class="bottom-bar-item">
+                            <a class="bottom-bar-link" href="https://emokymai.vu.lt/">All courses</a>
+                        </li>
+                        <li class="bottom-bar-item">
+                            <a class="bottom-bar-link" href="https://emokymai.vu.lt/">Archive</a>
+                        </li>
+                        <li class="bottom-bar-item">
+                            <a class="bottom-bar-link" href="faq.html">FAQ</a>
+                        </li>
+                        <li class="bottom-bar-item">
+                            <a class="bottom-bar-link" href="https://emokymai.vu.lt/">English</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="course-header-image">
+                <div class="course-header-image-container">
+                    <div class="course-header-box">
+                        <h1 class="course-header-title">
+                            Programavimo pagrindai (I.Radavičius, paskaitos/pratybos)
+                        </h1>
+                    </div>
+                    <div class="course-header-box">
+                        <ul class="course-list">
+                            <li class="course-item">
+                                <a class="course-link" href="">Dashboard</a>
+                            </li>
+                            <li class="course-item">
+                                <a class="course-link" href="">/ My courses</a>
+                            </li>
+                            <li class="course-item">
+                                <a class="course-link" href="">/ Programavimo pagrindai (I. Radavičius,
+                                    paskaitos/pratybos</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="main-container">
+            <h3>
+                <span>
+                    <a class="main-container-title"
+                        href="https://emokymai.vu.lt/course/view.php?id=2303#section-2">Testai</a>
+                </span>
+            </h3>
+            <div>
+                <p id="miniTestTitle" class="mini-test" />
+            </div>
+            <div id="content" class="images-container" />
+
+        </section>
+    </div>
+    <footer class="footer">
+        <small class="copyright">
+            Copyright © Vilnius University
+        </small>
+    </footer>
+</body>
+
+</html>
+<script>
+    // container where images will be placed
+    const content = document.getElementById('content');
+    // test title
+    const testTitle = document.getElementById('miniTestTitle');
+
+    // defined test images
+    const firstTestImages = [];
+    const secondTestImages = ['2_testas/1.png', '2_testas/2.png', '2_testas/3.png', '2_testas/4.png', '2_testas/5.png', '2_testas/6.png', '2_testas/7.png', '2_testas/8.png'];
+    const thirdTestImages = ['3_testas/1.png', '3_testas/2.png', '3_testas/3.png', '3_testas/4.png', '3_testas/5.png', '3_testas/6.png', '3_testas/7.png', '3_testas/8.png', '3_testas/9.png'];
+    const fourthTestImages = ['4_testas/1.png', '4_testas/2.png', '4_testas/3.png', '4_testas/4.png', '4_testas/5.png', '4_testas/6.png', '4_testas/7.png', '4_testas/8.png', '4_testas/9.png', '4_testas/10.png'];
+    const fifthTestImages = ['5_testas/1.png', '5_testas/2.png', '5_testas/3.png', '5_testas/4.png', '5_testas/5.png', '5_testas/6.png', '5_testas/7.png', '5_testas/8.png', '5_testas/9.png', '5_testas/10.png'];
+
+    // 1 should be users input 
+    const titleText = document.createTextNode(`Minitestas ${1}`);
+    testTitle.appendChild(titleText);
+    // constants
+    const ADDITIONAL_NUMBER_TO_ADD = 1;
+
+    // appending images
+    // secondTestImages should be ['userinput'].map throught my constants
+    secondTestImages.map((item, index) => {
+        // Creating two html tags
+        const title = document.createElement('p');
+        const image = document.createElement('img');
+
+        // Appending text inside <p> tag
+        const text = document.createTextNode(`${index + ADDITIONAL_NUMBER_TO_ADD}. Užduotis`);
+        title.appendChild(text);
+
+        // Setting classes
+        title.className = "mini-test"
+        content.appendChild(title);
+
+        // Appending images
+        image.setAttribute("src", item);
+        image.style.width = '450px';
+        image.style.height = 'auto';
+        image.style.marginBottom = '45px';
+        content.appendChild(image);
+    });
+</script>
