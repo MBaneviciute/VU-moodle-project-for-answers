@@ -7,6 +7,9 @@
     --vu-color-light-grey: #6d727c;
     --vu-color-dark: #202630;
     --vu-color-black: black;
+    --vu-color-regular-grey: #f5f5f5;
+    --vu-color-dark-blue: #212529;
+    --vu-color-standard-grey: #dee2e6;
 }
 body {
 	box-sizing: border-box;
@@ -181,11 +184,12 @@ a {
     display: flex;
     flex-direction: column;
 }
-
+.grades-page,
 .faq-page {
     background-color: var(--vu-color-grey);
 }
 
+.grades-title-container,
 .faq-title-container {
     flex: 1 1 auto;
     min-height: 1px;
@@ -273,7 +277,107 @@ a {
 
 }
 
+.grades-text,
 .faq-text {
     color: #797f89;
     font-size: 14px;
+}
+
+.grades-image {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin-right: 30px;
+}
+
+.grades-account-wrapper {
+    display: flex;
+}
+
+.grades-name {
+    font-size: 24px;
+    font-weight: 300;
+    color: var(--vu-color-dark-grey);
+    margin-bottom: 10px;
+}
+
+.grade-texts {
+    margin-top: 30px;
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.grades-content {
+    padding: 1.25rem;
+}
+
+.grades-container {
+    margin: 0 auto;
+    max-width: 1680px;
+    flex: 1 0 auto;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--vu-color-white);
+}
+
+.grades-main-title {
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.generaltable thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid var(--vu-color-standard-grey);
+}
+
+.table thead th {
+    text-align: left;
+    vertical-align: bottom;
+    border-bottom: 2px solid var(--vu-color-standard-grey);
+}
+
+.table th, .table td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid var(--vu-color-standard-grey);
+}
+
+.generaltable th, .generaltable td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid var(--vu-color-standard-grey);
+}
+
+.table th, .table td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid var(--vu-color-standard-grey);
+}
+
+.grades-table-title {
+    text-decoration: none;
+    color: var(--vu-color-light-grey);
+    background-color: transparent;
+}
+
+th {
+    color: var(--vu-color-dark-grey);
+}
+
+.generaltable {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: var(--vu-color-dark-blue);
+}
+
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: var(--vu-color-dark-blue);
+}
+
+.grades-grey-row {
+    background-color: var(--vu-color-regular-grey);
 }
